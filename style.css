@@ -1,0 +1,726 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+:root {
+    --bg-color: #081b29;
+    --main-color: #00abf0;
+    --text-color: #333;
+    --white-color: #fff;
+    --cover-color: linear-gradient(45deg, #00abf0, #006e9a);
+    --border: .125rem solid #00abf0;
+    --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.wrapper {
+    position: relative;
+    width: 66rem;
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Left Background Blue Cover (Half Width) */
+.cover {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: var(--cover-color);
+    box-shadow: var(--box-shadow);
+}
+
+.cover.cover-left {
+    width: 50%;
+    left: 0;
+    border-top-left-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+}
+
+.cover.cover-right {
+    width: 50%;
+    right: 0;
+    border-top-right-radius: .6rem;
+    border-bottom-right-radius: .6rem;
+}
+
+.cover.cover-right.turn{
+    transform: rotateY('180deg');
+
+}
+
+/* White Centered Cover on the Left Side */
+.center-cover {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    width: 46%;
+    height: 90%;
+    background: var(--white-color);
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    z-index: 1;
+}
+
+/* White Centered Cover on the Right Side */
+.center-cover-right {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    width: 46%;
+    height: 90%;
+    background: var(--white-color);
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    z-index: 1;
+}
+
+/* Profile Content Styling */
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-color);
+}
+
+.profile-page img {
+    max-width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: .25rem solid var(--main-color);
+    margin-bottom: .8rem;
+    margin-top: 1rem;
+}
+
+.profile-page h1 {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.profile-page h3 {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    margin: 0.5rem;
+}
+
+
+.profile-page h4 {
+    font-size: 0.8rem;
+    color: var(--main-color);
+    margin: 0.3rem;
+}
+
+.profile-page h5{
+    font-size: 0.8rem;
+    margin: 0.2rem;
+}
+
+
+
+.profile-page .social-media {
+    margin: .6rem 0 .8rem;
+    display: flex;
+    margin-top: 1rem ;
+}
+
+
+.profile-page .social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: var(--border);
+    border-radius: 50%;
+    font-size: 1.4rem;
+    color: var(--main-color);
+    margin: 0 .2rem;
+    transition: .5s;
+}
+
+.profile-page .social-media a:hover {
+    background: var(--main-color);
+    color: var(--white-color);
+}
+
+.profile-page p{
+    margin-top: 1.rem ;
+  
+  
+}
+
+.btn-box {
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: .5rem 1.4rem;
+    margin: .5rem;
+    background: var(--main-color);
+    color: var(--white-color);
+    border-radius: .5rem;
+    transition:  0.3s ease;
+}
+
+.btn:hover {
+    background: #006e9a;
+}
+
+.btn-box .btn:nth-child(2){
+    border: var(--border);
+    border-radius: .5rem;
+    background: transparent;
+    color: var(--main-color);
+}
+
+
+.btn-box .btn:nth-child(2):hover{
+        background: var(--main-color);
+        color: var(--white-color);
+}
+
+
+/* Book Page Content Styling (Inside Right White Cover) */
+
+
+
+.book-page {
+    color: var(--text-color);
+}
+
+.book-page  i{
+    display: flex;
+    padding: 8px;
+    font-size: 1.rem;
+    color: #00abf0;
+  
+}
+
+.book-page h2 {
+    font-size: 1.3rem;
+    color: var(--text-c);
+    margin-top: -11rem; 
+    padding: 1rem;
+}
+
+.book-page p{
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-align : justify;
+    
+}
+
+.book-page ul {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+
+}
+.book-page ul li {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.number-page{
+    position: absolute;
+    bottom:.9rem;
+    transform: translateX(-50%);
+
+}
+
+.nextprev-btn{
+    position: absolute;
+    bottom:.9rem;
+    right: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition:.5s ;
+}
+
+.nextprev-btn:hover{
+    color: var(--main-color);
+
+
+}
+
+/* Adjust position of back buttons on specific pages */
+#page-2 .back-btn,
+#page-4 .back-btn,
+#page-6 .back-btn,
+#page-8 .back-btn {
+    left: 1.5rem; /* Move to the left corner */
+    right: unset; /* Remove right positioning */
+}
+
+
+/* About Me Page Styling */
+.book-page {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px 25px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #fefefe;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.book-page {
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-page:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-page h2 {
+    font-size: 1.8rem;
+    color: var(--text-c);
+    margin-top: -rem; 
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.book-page p {
+  font-size: 0.7rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  text-align: justify;
+  color: #444;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 480px) {
+  .book-page {
+    padding: 15px 15px;
+    margin: 20px;
+  }
+
+  .book-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .book-page p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/*page2*/
+
+.book-page2 h2 {
+    font-size: 1.8rem;
+    color: var(--text-c);
+    margin-top: -8.5rem; 
+    padding: 1rem;
+    text-align: center;
+}
+
+.book-page2 i{
+    color: var(--main-color);
+    font-size: 0.8rem;
+  
+
+}
+
+
+.book-page2 h3{
+    font-size: 1rem;
+
+}
+
+.book-page2 p{
+    font-size: 0.8rem;
+    text-align : justify;
+    margin: 0.5rem;
+}
+
+/*page3*/
+
+
+
+.book-page3 h2 {
+    font-size: 1.8rem;
+    color: var(--text-c);
+    margin-top: -2rem; 
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.book-page3 i{
+    color: var(--main-color);
+    font-size: 0.8rem;
+   
+
+}
+
+
+.book-page3 h3{
+    font-size: 1rem;
+
+}
+
+.book-page3 p{
+    font-size: 0.8rem;
+    text-align : justify;
+    margin: 0.5rem;
+}
+
+
+/*page4*/
+
+
+
+
+/* Common service section styling for Page 4 and 5 */
+.book-page4 .service-section,
+.book-page5 .service-section {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.book-page4 .service-section:hover,
+.book-page5 .service-section:hover {
+    transform: translateY(-5px);
+}
+
+.book-page4 .service-section h3,
+.book-page5 .service-section h3 {
+    font-size: 1.2rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.book-page4 .service-section img,
+.book-page5 .service-section img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.book-page4 .service-section p,
+.book-page5 .service-section p {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--text-color);
+    padding: 0 0.5rem;
+}
+
+/* Fix incorrect variable name in headings */
+.book-page4 h2,
+.book-page5 h2 {
+    font-size: 1.8rem;
+    color: var(--text-color); /* Fixed: previously var(--text-c) */
+    margin-top: -2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+/*page5*/
+/* Shared Styles */
+.book-page4 .service-section,
+.book-page5 .service-section {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow, 0 2px 6px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+}
+
+.book-page4 .service-section:hover,
+.book-page5 .service-section:hover {
+    transform: translateY(-5px);
+}
+
+.book-page4 .service-section h3,
+.book-page5 .service-section h3 {
+    font-size: 1.2rem;
+    color: var(--main-color, #333);
+    margin-bottom: 0.5rem;
+}
+
+.book-page4 .service-section img,
+.book-page5 .service-section img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 0.3rem;
+    border-radius: 6px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-page4 .service-section p,
+.book-page5 .service-section p {
+    font-size: 0.68rem;
+    text-align: center;
+    color: var(--text-color, #555);
+    padding: 0 0.5rem;
+}
+
+
+
+
+/*page6*/
+.book-page6 h2 {
+    font-size: 1.8rem;
+    color: var(--text-c);
+    margin-top: -18rem; 
+    padding: 1rem;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.skill-item i {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    margin-right: 0.5rem;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    background: #eaf8ff;
+}
+
+
+/*page7*/
+.book-page7 h2 {
+    font-size: 1.8rem;
+    color: var(--text-c);
+    margin-top: -18rem; 
+    padding: 1rem;
+    text-align: center;
+}
+
+
+
+/*page8*/
+.book-page8 h2 {
+    font-size: 1.3rem;
+    color: var(--text-c);
+    margin-top: -18rem; 
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.section-five {
+  padding: 10px;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-top h3 {
+  font-size: 18px;
+  margin-bottom: 2px;
+  text-align: center;
+  color: #222;
+}
+
+.contact-top p {
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #777;
+}
+.contact-middle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.contact-middle div {
+  background-color: #fff;
+  padding: 2px 4px;          /* smaller padding */
+  border-left: 2px solid #007bff;
+  border-radius: 3px;        /* smaller radius */
+  font-size: 9px;            /* smaller font */
+  line-height: 1.1;          /* tighter line height */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-icon {
+  font-size: 9px;
+  color: #007bff;
+  margin-right: 4px;
+}
+
+.contact-middle span {
+  font-weight: 600;
+  display: block;
+  font-size: 12px;
+  margin-top: 2px;
+  color: #222;
+}
+
+.contact-middle p {
+  margin: 2px 0 0;
+  color: #555;
+  font-size: 11px;
+  word-wrap: break-word;
+}
+
+.contact-middle a {
+  font-size: 11px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.contact-icon {
+  font-size: 10px;
+  color: #007bff;
+  margin-right: 6px;
+}
+
+.contact-middle span {
+  font-weight: 600;
+  display: block;
+  font-size: 13px;
+  margin-top: 4px;
+  color: #333;
+}
+
+.contact-middle p {
+  margin: 3px 0 0;
+  color: #555;
+  font-size: 12px;
+}
+
+.contact-middle a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 12px;
+}
+
+.contact-middle div:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.15);
+}
+
+/* Contact form */
+.contact-bottom .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-bottom input[type="text"],
+.contact-bottom input[type="email"],
+.contact-bottom textarea {
+  padding: 6px 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.contact-bottom input:focus,
+.contact-bottom textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.contact-bottom textarea {
+  resize: vertical;
+  rows: 5;
+}
+
+.contact-bottom .btn {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 13px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center; /* Center in flex container */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-bottom .btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
